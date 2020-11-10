@@ -7,7 +7,7 @@ import Song from './components/Song'
 import Library from './components/Library'
 import Nav from './components/Nav'
 //Add Util
-import data from './util'
+import data from './data'
 
 function App() {
   //Ref
@@ -32,6 +32,9 @@ function App() {
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
+        setSongs={setSongs}
+        setCurrentSong={setCurrentSong}
+        songs={songs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
         audioRef={audioRef}
